@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML Forms</title>
+  </head>
+  <body>
+    <h1 id="your-info">Your information</h1>
+    <form aria-labelledby="your-info">
+      <label for="input-name">Name:</label>
+      <input type="text" name="name" id="input-name" 
+      placeholder="Enter your name" minlength="2" required /><br>
+      <label for="input-email">Email:</label>
+      <input id="input-email" type="email" name="email" required /><br>
+      <label for="input-date">Your favorite date:</label>
+      <input id="input-date" type="date" name="favorite-date" /><br>
+      <label for="select-guests">How many friends will join you?</label><br>
+      <label for="input-age">Age</label>
+      <input id="input-age" type="number" name="age" required min="18" max="200" /><br>
+      <select id="select-guests" name="friends-to-join[]" multiple>
+        <option value="" disabled>--Please choose an option--</option>
+        <option value="single">I come alone.</option>
+        <option value="multiple">Maybe some?</option>
+        <option value="alone">I do not have friends.</option>
+      </select>
+      <fieldset>
+        <legend>Gender</legend>
+        <label for="gender-male">Male</label>
+        <input type="radio" name="gender" id="gender-male" value="male" required>
+        <label for="gender-female">Female</label>
+        <input type="radio" name="gender" id="gender-female" value="female">
+        <label for="gender-unspec">Im not saying</label>
+        <input type="radio" name="genderx" id="gender-unspec" value="unspec">
+      </fieldset>
+      <fieldset>
+        <legend>Pet</legend>
+        <label for="cb-cat">Cat</label>
+        <input type="checkbox" name="pet[]" id="cb-cat" value="cat">
+        <label for="cb-dog">Dog</label>
+        <input type="checkbox" name="pet[]" id="cb-dog" value="dog">
+        <label for="cb-hamster">Hamster</label>
+        <input type="checkbox" name="pet[]" id="cb-hamster" value="hamster">
+      </fieldset><br>
+      <textarea name="thetext" rows='5' cols="60" class="mytext bold"></textarea>
+      <br>
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+  </body>
+</html>
